@@ -4,7 +4,7 @@ install the java if it is not available
 sudo apt install default-jdk
 -------------------
 download the tomcat file from google
-wget http://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.27/bin/apache-tomcat-9.0.27.tar.gz -P /tmp
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz
 --------------------------
 extract the downloaded file 
 sudo tar -xvzf /tmp/apache-tomcat-9*.tar.gz -C /opt/tomcat
@@ -71,7 +71,17 @@ under -----> /opt/tomcat/webapps/manager/META-INF# cat context.xml
   <Valve className="org.apache.catalina.valves.RemoteAddrValve"
          allow=".*" />
 </Context>
+------------------------------------
+
+How to change the port number
+
+cd /home/root/opt/tomcat/conf/sudo vi server.xml
+
+change port number 
+
+connector port = 8080
+
 ---------------------------
 
 
-For any tomcat reference visit to this site using this  "https://linuxize.com/post/how-to-install-tomcat-9-on-ubuntu-18-04/"
+For any tomcat reference visit to this site using this  "https://tomcat.apache.org/download-90.cgi"
